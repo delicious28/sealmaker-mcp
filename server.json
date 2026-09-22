@@ -1,0 +1,13 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.delicious28/sealmaker-mcp",
+  "title": "SealsCrafter 印章",
+  "description": "Carve any Western name into an authentic Chinese name seal (seal script, PNG output) with a real Chinese name and the meaning of every character. Free, no API key.",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.sealscrafter.com/mcp"
+    }
+  ]
+}
