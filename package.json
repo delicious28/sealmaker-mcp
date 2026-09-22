@@ -1,0 +1,11 @@
+{
+  "name": "sealmaker-mcp",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "wrangler dev", "deploy": "wrangler deploy" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@resvg/resvg-wasm": "^2.6.2",
+    "opentype.js": "^1.3.4"
+  }
+}
