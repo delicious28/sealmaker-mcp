@@ -1,0 +1,93 @@
+{
+  "identifier": "delicious28-sealmaker-mcp",
+  "name": "SealsCrafter (Chinese Name Seals)",
+  "description": "Carve any Western name into an authentic Chinese name seal: real seal-script engraving rendered as PNG, a real Chinese name chosen for meaning, and the etymology of every character returned with the result. Free, no API key.",
+  "version": "1.0.0",
+  "author": "delicious28",
+  "authorUrl": "https://github.com/delicious28",
+  "category": "tools",
+  "cloudEndpoint": "https://www.sealscrafter.com/mcp",
+  "homepage": "https://www.sealscrafter.com/mcp/",
+  "icon": "https://www.sealscrafter.com/favicon.svg",
+  "tags": [
+    "seal",
+    "chinese",
+    "calligraphy",
+    "names",
+    "image-generation",
+    "culture"
+  ],
+  "localizations": [
+    {
+      "locale": "zh-CN",
+      "name": "印章生成器 SealsCrafter",
+      "description": "把英文名刻成真正的中文姓名印章：篆书实刻渲染输出 PNG，按寓意取真实中文名字，每个字的字源一并返回。免费，无需 API Key。",
+      "tags": [
+        "印章",
+        "中文",
+        "篆书",
+        "起名",
+        "文化"
+      ]
+    },
+    {
+      "locale": "ja-JP",
+      "name": "印章ジェネレーター SealsCrafter",
+      "description": "欧米の名前本格的な中国姓名印（篆書刻印PNG）に彫り、名前の意味と各漢字の語源も返します。無料、APIキー不要。"
+    }
+  ],
+  "tools": [
+    {
+      "name": "render_chinese_name_seal",
+      "description": "Render a traditional Chinese name seal (印章) as a PNG image for a Western/English name. The name is transliterated into seal script (篆書) characters chosen for meaning, and the result includes each character meaning. Returns a base64 PNG plus an explanation. Free, no API key.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "English/Western name, e.g. \"Emma\" or \"Alexander\""
+          },
+          "size": {
+            "type": "number",
+            "description": "PNG edge length in px (128-1024, default 512)"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "lookup_meaning",
+      "description": "Look up the meaning and etymology of a single Chinese character used in Chinese names (e.g. \"雨\", \"李\"), including pinyin, tone and classical sources. Links to the full page on sealscrafter.com.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "type": "string",
+            "description": "One Chinese character, e.g. \"雨\""
+          }
+        },
+        "required": [
+          "character"
+        ]
+      }
+    },
+    {
+      "name": "suggest_names",
+      "description": "Suggest Chinese names for an English/Western name: the canonical transliteration with character meanings, plus related hand-written name pages on sealscrafter.com.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "English/Western name, e.g. \"Sophie\""
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    }
+  ]
+}
